@@ -1,19 +1,28 @@
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 
-engine = create_engine('sqlite:///supply_tracker.db')
+engine = create_engine('sqlite:///users.db')
+Session = sessionmaker(bind=engine)
 
 Base = declarative_base()
 
-Session = sessionmaker(bind=engine)
 
-
-class user:
-    __tablename__ = 'user'
+class User:
+    __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    username = Column(String)
     email = Column(String)
     password = Column(String)
+
+
+class CustomNews:
+    __tablename__ = 'news'
+    id = Column(Integer, primary_key=True)
+    year = Column(Integer)
+    title = Column(String)
+    content = Column(String)
+    author_id = Column(Integer, ForeignKey('users.id'))
+    author = relationship('User')
 
 
 Base.metadata.create_all(engine)
