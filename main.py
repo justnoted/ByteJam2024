@@ -19,8 +19,12 @@ response = requests.get(conn)
 print(response.json())
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def index():  # put application's code here
+    return render_template("index.html")
+
+
+if __name__ == '__main__':
+    app.run()
 
 @app.route('/home')
 def home():
