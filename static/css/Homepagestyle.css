@@ -1,0 +1,285 @@
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: BigFonts;
+    src: url('/static/fonts/lodeh-regular-font\ \(1\).zip');
+  }
+
+/* Navigation Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+} 
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+li a:hover{
+    color: gray;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: #000000;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}
+nav button{
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: #000000 solid 2px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+nav button:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+header img{
+    width: 40px;
+}
+section a{
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.Line{
+    height: 10px;
+    width: 20%;
+    display: flex;
+    align-content: center;
+}
+.Line img{
+    height: 10px;
+    width: 100%;
+
+}
+.Timeline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 10px;;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.Timeline_year{
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 8px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+}
+.Timeline_year:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+.Timeline_year_2{
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 8px;
+    height: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+}
+.Timeline_year_2:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+#Next_btn_1{
+    margin-right: 10px;
+    transform: scaleX(-1);
+}
+#Next_btn_2{
+    margin-left: 10px;
+}
+
+
+.background_img img{
+    width: 87%;
+    height: 400px;
+    padding-top: 2%;
+    margin-bottom: 20px;
+}
+.background_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title_background{
+    background-color: white;
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: -80px;
+    padding: 2%;
+    padding-bottom: 0;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+    text-align: center;
+    box-shadow: 0 2px 5px 2px #615f5f77;
+}
+#News_Title_img{
+    height: 100px;
+}
+
+.title_background button{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin: 15px 0 ;
+    margin-bottom: -20px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .9rem;
+}
+/* Hover */
+.title_background button:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+
+main h2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 200px;
+    font-family: "Alatsi", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+.News_cards {
+    background-color: #D9D9D9;
+    margin: 10px 10%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+.News_cards img{
+    height: 150px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.Card{
+    height: fit-content;
+    font-family: "Ramabhadra", sans-serif;
+}
+
+.Card button{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5% ;
+}
+
+.Card h3{
+    font-size: 2.5rem;
+    font-weight: 200;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.Card h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.Card p{
+    line-height: 1.5;
+    font-size: .8rem;
+    padding-right: 15%;
+    margin-top: 25px;
+}
+.titleandbutton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+
+/* Hovers */
+#Active_circle:hover {
+    height: 30px;
+}
+
+#Next_btn_1 img {
+    transition: height 0.75s;
+}
+#Next_btn_1 img:hover{
+    height: 35px;
+}
+
+#Next_btn_1 img::after{
+    height: 35px;
+}
+
+#Next_btn_2 img {
+    transition: height 0.5s;
+}
+
+
+
+
+#Next_btn_2 img:hover{
+    height: 35px;
+}
