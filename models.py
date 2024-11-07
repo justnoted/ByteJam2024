@@ -17,6 +17,12 @@ class User:
     email = Column(String)
     password = Column(String)
 
+    def __init__(self, username, email, password):
+        self.username = username
+        self.email = email
+        self.password = password
+
+
 
 class CustomNews:
     __tablename__ = 'news'
