@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Shrimpy Chip Times</title>
+</head>
+<body>
+    <h1>Your News, through the decades</h1>
+
+    {% if user_signup %}
+    	<h2>Sign Up today!</h2>
+    {% else %}
+        <h2>Log In</h2>
+    {% endif %}
+
+    <form action="/" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+
+        {% if user_signup %}
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+        {% endif %}
+
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password">
+
+        {% if user_signup %}
+            <input type="submit" value="Sign Up" name="submit">
+        {% else %}
+            <input type="submit" value="Log In" name="submit">
+            <input type="submit" value="Create Account" name="submit">
+        {% endif %}
+    </form>
+</body>
+</html>
