@@ -62,7 +62,16 @@ def validate_user_login(username, password):
         if not check_user:
             errors.append(f"`{username}` does not exist. Create an account today! :)")
             return errors
-        # TODO: Validate if password matches with input password. Use Username to match. Add encryption.
+
+        user = session.query(User).filter_by(username=username).first()
+        if user.username == username and user.password == password:
+            return None
+
+        errors.append("Incorrect password. Please try again.")
+    else:
+        errors.append("Username is required to log in.")
+
+    return errors if errors else None
 
 
 Base.metadata.create_all(engine)
