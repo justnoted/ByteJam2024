@@ -1,24 +1,23 @@
-from flask import Flask
+from flask import Flask, render_template, url_for, redirect, request
+from models import *
 
-app = Flask(__name__, )
-app.secret_key = "secret"
-import os
 
-from flask import Flask, render_template
 app = Flask(__name__, template_folder='templates')
 app.secret_key = "maybe_use_env_file_lol"
-os.makedirs("static", exist_ok=True)
 
 session = Session()
 
-app = Flask(__name__, )
-app.secret_key = "secret"
 
-os.makedirs("static", exist_ok=True)
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        session['username'] = request.form['username']
+        session['password'] = request.form['password']
 
-@app.route('/')
-def index():  # put application's code here
-    return render_template("index.html")
+        if request.form['submit'] == "Create Account":
+            return render_template("login.html", user_signup=True)
+
+    return render_template("login.html")
 
 @app.route('/home')
 def home():
