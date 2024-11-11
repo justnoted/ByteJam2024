@@ -13,6 +13,7 @@ session = Session()
 username = ""
 set_year = get_today_decade()
 
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     global username
@@ -52,11 +53,6 @@ def index():
 def home():
     return f"{username} | {set_year}"
     # return render_template(f"{session['year']}/index.html")     # TODO: Hook up the API JSON here
-
-
-@app.route('/article')
-def article():
-    return render_template(f"{session['year']}/article.html")   # TODO: Add article query to display content
 
 
 @app.route('/article')

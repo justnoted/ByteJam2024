@@ -47,7 +47,7 @@ def validate_user_signup(username, email, password):
     pass_regex = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"  # TODO: Revise regex, not working
 
     errors.append("Email is required") if email.strip() == "" else errors.append("Please enter a valid email") if not re.fullmatch(email_regex, email) else None
-    errors.append("Password is required") if password.strip() == "" else errors.append("Password MUST be 6-20 long, 1 UPPERCASE, 1 lowercase, and 1 special symbol") if re.match(pass_regex, password) else None
+    errors.append("Password is required") if password.strip() == "" else errors.append("Password MUST be 6-20 long, 1 UPPERCASE, 1 lowercase, and 1 special symbol") if bool(re.match(pass_regex, password)) else None
 
     return errors if errors else None
 
