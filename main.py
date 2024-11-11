@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, redirect, request
-from models.models import *
+from back_end.models import *
+from back_end.NYTimesAPI import *
 import os
 
 
@@ -24,6 +25,7 @@ def index():
 
         if request.form.get('submit') == "Log In":
             errors = validate_user_login(request.form.get('username'), request.form.get('password'))
+            redirect(url_for('home'))
             if errors:
                 return render_template("login.html", errors=errors)
 
@@ -50,7 +52,11 @@ def index():
 
 @app.route('/home')
 def home():
-    return f"{username} | {set_year}"
+    news_article = get_news_data()
+    if article is None:
+        return render_template('home.html', error="Failed to fetch news data")
+        # return f"{username} | {set_year} |{article} | home.html"
+    return render_template('home.html', username=username, set_year=set_year, articles=news_article)
     # return render_template(f"{session['year']}/index.html")     # TODO: Hook up the API JSON here
 
 
