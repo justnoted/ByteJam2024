@@ -11,7 +11,6 @@ os.makedirs("static", exist_ok=True)
 session = Session()
 
 username = ""
-set_year = get_today_decade()
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -51,13 +50,17 @@ def index():
 
 @app.route('/home')
 def home():
-    return f"{username} | {set_year}"
-    # return render_template(f"{session['year']}/index.html")     # TODO: Hook up the API JSON here
+    decade = request.form.get('year') if request.form.get('year') else get_today_decade()
+    month = get_today_month()
+
+    # TODO: Hook up the API JSON here
+
+    return render_template(f"{decade}/index.html")
 
 
-@app.route('/article')
-def article():
-    return render_template(f"{session['year']}/article.html")   # TODO: Add article query to display content
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 
 if __name__ == '__main__':
