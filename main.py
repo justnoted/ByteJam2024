@@ -14,6 +14,7 @@ session = Session()
 username = ""
 set_year = get_today_decade()
 
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     global username
