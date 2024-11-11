@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&family=Gowun+Batang:wght@400;700&family=Luckiest+Guy&family=Paytone+One&display=swap');
+
+h1 {
+    background-color: rgb(0, 0, 0);
+    border-top: 15px;
+    border-radius: none;
+    border-width: 15px;
+    border-color: rgb(18, 2, 78);
+    border-style: solid;
+    font-family: "Gajraj One";
+}
+
+h1{
+    text-align: center;
+    color: #fff9f9e9;
+}
+
+img{
+    size: 550px;
+    width: 550px;
+    align-self: start;
+    align-self: baseline;
+    gap: 80px;
+}
+
+ p strong{
+    width: 255px;
+    color: #ff0000;
+    font-family: "Gajraj One";
+}
+
+div h2{
+    text-align: right;
+    aside{
+    gap: 22px;
+    text-align: right;
+    width: 350px;
+    }
+}
+
+div h2{
+    text-align: left;
+    aside{
+    gap: 22px;
+    text-align: left;
+    width: 350px;
+    }
+}
+
+div h3{
+    text-align: c;
+}
+
+h2{
+    color: #790000;
+    width: 275px;
+}
+
+h3{
+    color: #790000;
+    width: 275px;
+}
+
+img #Chicken-God{
+    size: 1450px;
+    width: 11350px;
+}
+body{
+display: flex;
+justify-content: center;
+background-image: url(https://hard-sf.com/wp-content/uploads/2022/05/abstract_mirror.jpg);
+background-color: #1F1D4C;
+background-size: cover;
+}
+
+p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

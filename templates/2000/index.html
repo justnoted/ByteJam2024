@@ -5,90 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrimp Chip's News</title>
     <link rel="stylesheet" href="../../static/css/genera3l.css">
-    <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Gajraj+One&family=Gowun+Batang:wght@400;700&family=Luckiest+Guy&family=Paytone+One&display=swap');
-        h1 {
-            background-color: rgb(0, 0, 0);
-            border-top: 15px;
-            border-radius: none;
-            border-width: 15px;
-            border-color: rgb(18, 2, 78);
-            border-style: solid;
-            font-family: "Gajraj One";
-        }
-
-        h1{
-            text-align: center;
-            color: #fff9f9e9;
-        }
-
-        img{
-            size: 550px;
-            width: 550px;
-            align-self: start;
-            align-self: baseline;
-            gap: 80px;
-        }
-
-         p strong{
-            width: 255px;
-            color: #ff0000;
-            font-family: "Gajraj One";
-        }
-
-        div h2{
-            text-align: right;
-            aside{
-            gap: 22px;
-            text-align: right;
-            width: 350px;
-            } 
-        }
-
-        div h2{
-            text-align: left;
-            aside{
-            gap: 22px;
-            text-align: left;
-            width: 350px;
-            } 
-        }
-
-        div h3{
-            text-align: c;
-        }
-
-        h2{
-            color: #790000;
-            width: 275px;
-        }
-
-        h3{
-            color: #790000;
-            width: 275px;
-        }
-
-        img #Chicken-God{
-            size: 1450px;
-            width: 11350px;
-        }
-        body{
-        display: flex; 
-        justify-content: center;
-        background-image: url(https://hard-sf.com/wp-content/uploads/2022/05/abstract_mirror.jpg);
-        background-color: #1F1D4C;
-        background-size: cover;
-        }
-
-        p{
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-    </style>
 </head>
 <body>
+    {% extends 'layout.html' %}
+
+<!--TODO: REVISE THROUGH HTML TO ADD JINJA LOOPING -->
+    {% block content %}
+
     <article>
     <h1>Shrimpy Back In Time</h1>
     <aside></aside><p> <strong>Welcome, To our Website of Time traveling:</strong>
@@ -181,5 +104,7 @@
                The 12.1" G4 laptop, based on a new logic board design, included DDR RAM, 
          This website is from the year 2000s</p></aside>
 </article>
+
+    {% endblock %}
 </body>
 </html>

@@ -8,66 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Ramabhadra&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="/templates/2020/Index.html"><img src="/static/images/ShrimpyLogo.png" alt=""></a>
-        
-            <nav>
-                <ul>
-                    <li><a href="#">Us. World</a></li>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="/templates/about.html">About Us</a></li>
-                    
-                    <button>Login</button>
-                </ul>
-            </nav>
+    {% extends 'layout.html' %}
 
-    </header>
-    <section class="Timeline">
-        
-        <a id="Next_btn_1" href=""><img src="/static/images/nextButton.png " height="25" alt="Previous Button"></a>
-        <a href="#" class="Timeline_year">Year</a>
-        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
- 
-        <div class="Line">
-            <img src="/static/images/remove.png"  alt="Line for on Timeline">
-        </div>        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-        
-        <div class="Line">
-            <img src="/static/images/remove.png"  alt="Line for on Timeline">
-        </div>        
-        <a class="button_Active" href="#"><img id="Active_circle"  src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-
-        <div class="Line">
-            <img  src="/static/images/remove.png" alt="Line for on Timeline">
-        </div>        
-        <a href="#" ><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-
-        <div class="Line">
-            <img src="/static/images/remove.png" alt="Line for on Timeline">
-        </div>
-        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-
-        <a href="#" class="Timeline_year_2" >Year</a>
-        <a href="#" id="Next_btn_2"><img src="/static/images/nextButton.png " height="25" alt="Previous Button"></a>
-
-    </section>
-
+    {% block content %}
     <main>
-        
-            <div class="background_img">
-                <img src="/static/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
-                
-                <div class="title_background">
-                    <img id="News_Title_img" src="/static/images/NewsTitle.png" alt="Title of the news">
-                    <h1>Article Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <button>Read More</button>
+        <div class="background_img">
+            <img src="/static/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
+
+            <div class="title_background">
+                <img id="News_Title_img" src="/static/images/NewsTitle.png" alt="Title of the news">
+                <h1>Article Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <button>Read More</button>
             </div>
-            </div>
+        </div>
 
         <h2>Today's News</h2>
         
@@ -109,5 +67,6 @@
             </div>
         </section>
     </main>
+    {% endblock %}
 </body>
 </html>
