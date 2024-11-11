@@ -1,0 +1,19 @@
+#Chicken-Dating-App{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    background-color: rgb(9, 12, 207);
+    border-top: 15px;
+    border-radius: solid;
+    border-width: 15px;
+    border-color: rgb(6, 4, 92);
+    border-style: solid;
+}
+
+#Chicken-God{
+    size: 350px;
+    width: 350px;
+    align-self: start;
+    align-self: baseline;
+    gap: 45px;
+}
