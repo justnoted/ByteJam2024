@@ -99,20 +99,24 @@ article > p{
     display: flex;
     margin-bottom: 3%;
     font-family: "Open Sans", sans-serif;
-    align-items: center;
-    
+    align-items: center;    
 }
 .title_body p{
     font-family: "Open Sans", sans-serif;
     font-size: .8125rem;
     line-height: 150%;
+    margin-left: 5%;
 }
 .title_body h3{
     font-family: "Ramabhadra", sans-serif;
     line-height: 100%;
-    padding-right: 10%;
     font-weight: 500;
     white-space: nowrap;
+    padding: 20px 30px 20px 0;
+    padding-right: 80px;
+    border-right: solid 1px black;
+    width: 50px;
+
 }
 .Card_area{
     padding: 10px 15%;
@@ -122,6 +126,9 @@ article > p{
     width: 200px;
     height: 300px;
     background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cards > img{
@@ -129,5 +136,4 @@ article > p{
     height: 150px;
     background-color: white;
     border-radius: 50%;
-
 }
