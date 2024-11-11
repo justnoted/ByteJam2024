@@ -2,9 +2,8 @@ import json
 from datetime import datetime
 
 import requests
-from flask import Flask, request, redirect, url_for
-
-from models import*
+from flask import Flask, render_template, url_for, redirect, request
+from models.models import *
 
 app = Flask(__name__, )
 app.secret_key = "secret"
@@ -17,17 +16,20 @@ os.makedirs("static", exist_ok=True)
 
 session = Session()
 
-app = Flask(__name__, )
-app.secret_key = "secret"
 
-os.makedirs("static", exist_ok=True)
-
-@app.route('/')
-def login():
+@app.route('/', methods=['GET', 'POST'])
+def index():
     if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        password = request.form.get('password')
+        switch = request.form.get('switch')
+        if switch:
+            return render_template("login.html", signup=(switch == "register"))
+
+        if request.form.get('submit') == "Log In":
+            errors = validate_user_login(request.form.get('username'), request.form.get('password'))
+            if errors:
+                return render_template("login.html", errors=errors)
+            session['year'] = get_today_decade()
+            return redirect(url_for('home'))
 
         if validate_user_signup(name, email, password):
             new_user = User(username=name, email=email, password=password)
@@ -37,10 +39,28 @@ def login():
         else:
             return render_template('login.html')
     return render_template('welcome.html')
+        errors = validate_user_signup(request.form.get('username'), request.form.get('email'), request.form.get('password'))
+        if errors:
+            return render_template("login.html", errors=errors, signup=True)
+
+        new_user = User(request.form.get('username'), request.form.get('email'), request.form.get('password'))
+        session.add(new_user)
+        session.commit()
 
 @app.route("/welcome")
 def welcome():
     return render_template('welcome.html')
+        session['username'] = new_user.username
+        session['year'] = get_today_decade()
+
+        return redirect(url_for("home"))
+
+    return render_template("login.html")
+
+
+@app.route('/home')
+def home():
+    return render_template(f"{session['year']}/index.html")     # TODO: Hook up the API JSON here
 
 def get_news_data():
     try:
