@@ -42,5 +42,10 @@ def home():
     return render_template(f"{session['year']}/index.html")     # TODO: Hook up the API JSON here
 
 
+@app.route('/article')
+def article():
+    return render_template(f"{session['year']}/article.html")   # TODO: Add article query to display content
+
+
 if __name__ == '__main__':
     app.run()
