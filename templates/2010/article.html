@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2000s Article</title>
+    <style>
+
+    header{
+    display: flex;
+    justify-content: center;
+    border-bottom-style: solid;
+    }
+
+    button, p{
+    font-family: "Times New Roman", Times, serif;
+    }
+
+    nav{
+    background-color: grey;
+    height: 50px;
+    }
+
+    .footerTitle{
+    margin-top:10px;
+    border-style: none;
+    background-color: white;
+    color: blue;
+    }
+
+    article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    #image-subtext{
+    display:flex;
+    flex-direction: row;
+    max-width: 700px;
+    }
+
+    #bodyText{
+    max-width: 700px
+    }
+
+    #articleImage{
+    padding-right: 40px;
+    }
+
+    footer{
+    display:flex;
+    flex-direction: row;
+    border-top: solid;
+    margin-top:40px;
+    justify-content: space-evenly;
+    }
+
+    .bottomArticles{
+    margin-top: 40px
+    }
+
+        body{
+        display: flex;
+        flex-direction: column;
+
+        }
+
+
+
+
+</style>
+
+</head>
+
+<header>
+    <h1>The Shrimp Times</h1>
+</header>
+
+<nav>
+    <button>
+        place holder
+    </button>
+    <button>
+        place holder
+    </button>
+</nav>
+
+
+
+<body>
+    <article>
+        <h2 id="title">
+            Title
+        </h2>
+        <p id="author">Author</p>
+        <div id="image-subtext">
+            <img src="#" alt="article image" id="articleImage">
+            <p>Subtext</p>
+        </div>
+        <p id="bodyText">
+        </p>
+    </article>
+
+</body>
+<footer>
+    <article class="bottomArticles">
+        <img src ="#" alt="footerImage1">
+        <button class="footerTitle">footerTitle1</button>
+    </article>
+    <article class="bottomArticles">
+        <img alt="footerImage2">
+        <button class="footerTitle">footerTitle1</button>
+    </article>
+    <article class="bottomArticles">
+        <img alt="footerImage3">
+        <button class="footerTitle">footerTitle1</button>
+    </article>
+    <article class="bottomArticles">
+        <img alt="footerImage4">
+        <button class="footerTitle">footerTitle1</button>
+    </article>
+</footer>
+<script>
+    document.getElementById("title").innerHTML = "title";
+    document.getElementById("author").innerHTML = "author";
+    document.getElementById("articleImage").src = "insert image source";
+
+
+</script>
+</html>
