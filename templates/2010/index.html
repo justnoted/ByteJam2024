@@ -2,143 +2,250 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrimp Chip's News</title>
-    <link rel="stylesheet" href="../css/genera3l.css">
+    <title>2000s</title>
     <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Gajraj+One&family=Gowun+Batang:wght@400;700&family=Luckiest+Guy&family=Paytone+One&display=swap');
-        h1 {
-            background-color: red;
-            border-top: 25px;
-            border-radius: none;
-            border-width: 25px;
-            border-color: red;
-            border-style: dashed;
-            font-family: "Gajraj One";
-        }
-
-        h1{
-            text-align: center;
-            color: #fff9f9e9;
-        }
-
-        img{
-            size: 550px;
-            width: 550px;
-            align-self: start;
-            align-self: baseline;
-            gap: 80px;
-        }
-
-         p strong{
-            width: 255px;
-            color: #394271;
-        }
-
-        div h2{
-            text-align: right;
-            aside{
-            gap: 22px;
-            text-align: right;
-            width: 350px;
-            } 
-        }
-
-        div h2{
-            text-align: left;
-            aside{
-            gap: 22px;
-            text-align: left;
-            width: 350px;
-            } 
-        }
-
-        h2{
-            color: #394271;
-            width: 275px;
-        }
-
-        h3{
-            color: #394271;
-            width: 275px;
-        }
-
-        img #Chicken-God{
-            size: 150px;
-            width: 150px;
-            align-self: start;
-            align-self: baseline;
-            gap: 80px;
-        }
-
         body{
-            background-color: #CACED5;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         }
+
+        p, button{
+        font-family: "Times New Roman", Times, serif;
+        }
+
+        #container{
+        border-style: solid
+        }
+
+        .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: white;
+        width: 1100px;
+        }
+
+        .left {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+
+        }
+
+        .LA, .LT, .LC{
+        margin: 2px;
+
+        }
+
+        .LT, .MT, .RT1, .RT2{
+            color: blue;
+            margin-top: 20px;
+            border-style: none;
+            background-color:white;
+        }
+
+        .LT{
+        font-size: 1.25em;
+        }
+
+        .MT{
+        font-size: 2em;
+        }
+
+        .Middle{
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+        padding-left: 30px;
+        padding-right: 30px;
+        }
+
+        .right{
+        display: flex;
+        flex-direction: row;
+        width: 200px
+        }
+
+        .RC1, .RC2{
+        font-size: 8px;
+        }
+
+        header{
+        display:flex;
+        border-bottom-style: solid;
+        }
+
+        nav{
+        background-color: gray;
+        height: 50px;
+        }
+
+        .LC{
+        padding-top: 10px;
+        }
+
+
+
+
+
+
+
 
     </style>
 </head>
+
+<header>
+    <h1>The Shrimp Times</h1>
+</header>
+
+
 <body>
-    <article>
-    <h1>Shrimpy Back In Time</h1>
-    <aside></aside><p> <strong>Welcome, To our Website of Time traveling:</strong>
-    Where you can see all the websites From Past, To Present to The Future!
-    You can go back in time by using our website we made for the 2000's to the 90's
-    But if you want to go to the future you can click the Exit The Travel Box,
-    And travel to the modern day to the further year.
-    You can also find hidden facts around this area! (If you can find them!)
-    This website mostly focuses on the year 2010's and how the webpage devoloped
-    throughout the past years and how it changes the world of how websites should looked
-    liked, back then in the 2000's and 90's the web pages were mostly jammed packed and not
-    amazing looking because it was still brand new to people to use and not many people throughout 
-    the world has access to it or not many people knew about it. Back then it was complicated to
-    learn how to code and to learn how to make websites and news articles to look nice.
-    This website is from the year 2010!!</p><aside></aside>
-    <div id="Chicken-Dating-App">
-        <div><h2>Microsoft office 2010</h2>
-            <aside><p> <strong>from the year 2010's</strong>
-            During the year 2010 Microsoft made the year
-            You can go back in time by using our website we made for the 2000's to the 90's
-            But if you want to go to the future you can click the Exit The Travel Box,
-            And travel to the modern day to the further year.
-            You can also find hidden facts around this area! (If you can find them!)
-            This website will lead to other ones which are in the 2000's to the 90's
-            It will be focused on mostly the news articles and how it sparked computing!
-            (DID you Know? that Microsoft was the first ever to light a bulb of making to computing?
-            I guess you didn't know That!)
-        This website is from the year 2010</p></aside>
+
+    <div id="container">
+        <nav>
+            <button>placeholder</button>
+            <button>placeholder</button>
+        </nav>
+        <div class="content">
+            <!--    The left side content featuring the title, authour, and context in a vertical column -->
+            <div class="left">
+
+                <button id="TLB" class="LT"></button>
+                <p id="TLA" class="LA"></p>
+                <p id="TLP" class="LC"></p>
+            </div>
+
+            <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
+            <div class="Middle">
+                <img id="TMI" src="#" alt="img-placeholder">
+                <button id="TMB" class="MT"></button>
+                <p id="TMA" class="MA"></p>
+                <p id="TMP" class="MC"> </p>
+            </div>
+
+            <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
+            <div class="right">
+                <div>
+                    <button id="TRB" class="RT1"></button>
+                <p id="TRA" class="RA1"></p>
+                <p id="TRP" class="RC1"></p>
+                </div>
+
+
+            </div>
+
+
         </div>
-        <img src="https://th.bing.com/th/id/R.98564c3a3849f85bda8d7be78395fc36?rik=NnVW9XAcC54QgQ&riu=http%3a%2f%2fi.nextmedia.com.au%2fnews%2fmsoffice2010.gif&ehk=RLZ29LpiEYpNKS5Ckw4dVqGokyBQqke3Vh7V3L%2bcl6M%3d&risl=&pid=ImgRaw&r=0">
-        <div><h2>Microsoft Past</h2>
-            <aside><p> <strong>Microsoft's Past</strong>
-                Microsoft is a multinational computer technology corporation.
-                Microsoft was founded on April 4, 1975,
-                by Bill Gates and Paul Allen in Albuquerque, New Mexico.[1]
-                <img id="Chicke-God"src="https://s.hdnux.com/photos/03/31/05/889214/6/1200x0.jpg">
-                Its current best-selling products
-                are the Microsoft Windows operating system;
-                Microsoft Office, a suite of productivity software;
-                Xbox, a line of entertainment of games, music,
-                and video; Bing, a line of search engines; and Microsoft Azure,
-                a cloud services platform.[2]
-                In 1980, Microsoft formed a partnership with IBM to bundle Microsoft's
-                operating system with IBM
-                computers; with that deal, IBM paid Microsoft a royalty for every sale.
-                In 1985, IBM requested Microsoft to develop a new
-                operating system for their computers called OS/2. Microsoft produced that operating system,
-                but also continued to sell their own alternative,
-                which proved to be in direct competition with OS/2. Microsoft Windows 
-                eventually overshadowed OS/2 in terms of sales. When Microsoft launched
-                several versions of Microsoft Windows in the 1990s, they had captured
-                over 90% market share of the world's personal computers.
-                As of June 30, 2015, Microsoft has a global annual revenue of
-                US$86.83 billion (~$109 billion in 2023)
-                and 128,076 employees worldwide.[3] It develops, manufactures,
-                licenses, and supports a wide range of
-                software products for computing devices.[4][5][6]
-         This website is from the year 2010</p></aside>
+        <div class="content">
+            <!--    The left side content featuring the title, author, and context in a vertical column -->
+            <div class="left">
+
+                <button  id="MLB" class="LT"></button>
+                <p id="MLA" class="LA"></p>
+                <p id="MLP" class="LC"> </p>
+            </div>
+
+            <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
+            <div class="Middle">
+                <img id="MMI" src="#" alt="img-placeholder">
+                <button id="MMB" class="MT"></button>
+                <p id="MMA" class="MA"></p>
+                <p id="MMP" class="MC"></p>
+            </div>
+
+            <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
+            <div class="right">
+                <div>
+                    <button id="MRB" class="RT1"></button>
+                <p id="MRA" class="RA1"></p>
+                <p id="MRP" class="RC1"></p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="content">
+            <!--    The left side content featuring the title, authour, and context in a vertical column -->
+            <div class="left">
+
+                <button id="BLB" class="LT"></button>
+                <p id="BLA" class="LA"></p>
+                <p id="BLP" class="LC"> </p>
+            </div>
+
+            <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
+            <div class="Middle">
+                <img id="BMI" src="#" alt="img-placeholder">
+                <button id="BMB" class="MT"></button>
+                <p id="BMA" class="MA"></p>
+                <p id="BMP" class="MC"></p>
+            </div>
+
+            <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
+            <div class="right">
+                <div>
+                    <button id="BRB" class="RT1"></button>
+                <p id="BRA" class="RA1"></p>
+                <p id="BRP" class="RC1"> </p>
+                </div>
+
+
+            </div>
+
+
         </div>
     </div>
-</article>
+
 </body>
+
+<script>
+    document.getElementById("TLB").innerHTML = "title test";
+    document.getElementById("TLA").innerHTML = "author test";
+    document.getElementById("TLP").innerHTML = "Context";
+
+    document.getElementById("MLB").innerHTML = "title test";
+    document.getElementById("MLA").innerHTML = "author test";
+    document.getElementById("MLP").innerHTML = "Context";
+
+    document.getElementById("BLB").innerHTML = "title test";
+    document.getElementById("BLA").innerHTML = "author test";
+    document.getElementById("BLP").innerHTML = "Context";
+
+    document.getElementById("TMI").innerHTML = "insert image source";
+    document.getElementById("TMB").innerHTML = "title test";
+    document.getElementById("TMA").innerHTML = "author test";
+    document.getElementById("TMP").innerHTML = "Context";
+
+    document.getElementById("MMI").innerHTML = "insert image source";
+    document.getElementById("MMB").innerHTML = "title test";
+    document.getElementById("MMA").innerHTML = "author test";
+    document.getElementById("MMP").innerHTML = "Context";
+
+    document.getElementById("BMI").innerHTML = "insert image source";
+    document.getElementById("BMB").innerHTML = "title test";
+    document.getElementById("BMA").innerHTML = "author test";
+    document.getElementById("BMP").innerHTML = "Context";
+
+    document.getElementById("TRB").innerHTML = "title test";
+    document.getElementById("TRA").innerHTML = "author test";
+    document.getElementById("TRP").innerHTML = "Context";
+
+    document.getElementById("MRB").innerHTML = "title test";
+    document.getElementById("MRA").innerHTML = "author test";
+    document.getElementById("MRP").innerHTML = "Context";
+
+    document.getElementById("BRB").innerHTML = "title test";
+    document.getElementById("BRA").innerHTML = "author test";
+    document.getElementById("BRP").innerHTML = "Context";
+
+
+
+</script>
+
+
 </html>
+
