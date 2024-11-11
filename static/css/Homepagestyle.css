@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: BigFonts;
-    src: url('/static/fonts/lodeh-regular-font\ \(1\).zip');
-  }
 
 /* Navigation Section */
 header {
@@ -25,7 +21,6 @@ nav li {
 
 li a:hover{
     color: gray;
-
 }
 
 nav a{
@@ -170,7 +165,7 @@ section a{
     height: 40px;
     background-color: black;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     margin: 15px 0 ;
     margin-bottom: -20px;
@@ -205,14 +200,19 @@ main h2{
     display: flex;
     align-items: center;
     height: 200px;
+    margin-bottom: 30px;
 }
 
 .News_cards img{
     height: 150px;
     margin-right: 20px;
-    background-color: white;
+    background-color: rgb(47, 43, 43);
+    margin-left: -50px;
+    border-radius: 10px;
 }
-
+.News_cards p{
+    overflow: hidden;
+}
 .Card{
     height: fit-content;
     font-family: "Ramabhadra", sans-serif;
@@ -221,11 +221,19 @@ main h2{
 .Card button{
     width: 120px;
     height: 40px;
-    background-color: black;
+    background: #000000;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     margin-right: 5% ;
+    font-family: "Ramabhadra", sans-serif;
+    
+}
+
+.Card button:hover{
+    background: white;
+    color: #000000;
+    border: #000000 solid 2px;
 }
 
 .Card h3{
@@ -244,6 +252,7 @@ main h2{
     align-items: center;
 }
 .Card p{
+    height: 80px;
     line-height: 1.5;
     font-size: .8rem;
     padding-right: 15%;
@@ -277,9 +286,38 @@ main h2{
     transition: height 0.5s;
 }
 
-
-
-
 #Next_btn_2 img:hover{
     height: 35px;
 }
+.News_cards:hover{
+    box-shadow:  4px 5px 5px #00000047;
+
+    
+}
+
+@media (max-width: 1000px) {
+    .Cards p{
+        height: 60px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .News_cards{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    .News_cards img{
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    h2{
+        text-align: center;
+    }
+
+}
+
