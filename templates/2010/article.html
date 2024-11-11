@@ -89,27 +89,22 @@
 
 <body>
     <article>
-        <h2>
+        <h2 id="title">
             Title
         </h2>
-        <p>Author</p>
+        <p id="author">Author</p>
         <div id="image-subtext">
-            <img alt="article image" id="articleImage">
+            <img src="#" alt="article image" id="articleImage">
             <p>Subtext</p>
         </div>
         <p id="bodyText">
-            Context Context Context Context Context Context Context Context Context Context Context
-            Context Context Context Context Context Context Context Context Context Context Context
-            Context Context Context Context Context Context Context Context Context Context ContextContext Context Context Context Context Context Context Context Context Context Context
-            Context Context Context Context Context Context Context Context Context Context Context
-            Context Context Context Context Context Context Context Context Context Context Context
         </p>
     </article>
 
 </body>
 <footer>
     <article class="bottomArticles">
-        <img alt="footerImage1">
+        <img src ="#" alt="footerImage1">
         <button class="footerTitle">footerTitle1</button>
     </article>
     <article class="bottomArticles">
@@ -125,4 +120,11 @@
         <button class="footerTitle">footerTitle1</button>
     </article>
 </footer>
+<script>
+    document.getElementById("title").innerHTML = "title";
+    document.getElementById("author").innerHTML = "author";
+    document.getElementById("articleImage").src = "insert image source";
+
+
+</script>
 </html>
