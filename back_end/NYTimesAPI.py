@@ -12,7 +12,7 @@ def get_news_data():
         print(e)
 
 
-    parse_data(json_response)
+    return parse_data(json_response)
 
 
 def parse_data(json_response):

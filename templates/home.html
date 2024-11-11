@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/home.css" >
+    <title>Home</title>
+</head>
+<body>
+    <div >
+        <div >
+            <h1>Welcome, {{ username }}!</h1>
+            <p class="text-gray-600">{{ set_year }}</p>
+        </div>
+
+        {% if articles %}
+            {% for article in articles %}
+            <div>
+                <div>
+                    <h2>
+                        <a href="{{ article.web_url }}" target="_blank">{{ article.headline }}</a>
+                    </h2>
+                    <p>{{ article.section_name }}</p>
+                    <p >{{ article.lead_paragraph }}</p>
+                    <div>
+                        {% for author in article.authors %}
+                        <div>
+                            <span >{{ author.firstname }} {{ author.lastname }}</span>
+                            <span>({{ author.role }})</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        {% for keyword in article.keywords %}
+                        <div>{{ keyword }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div>{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
