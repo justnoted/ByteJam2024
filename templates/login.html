@@ -8,19 +8,27 @@
     <title>Welcome to Shrimpy Chip Times</title>
 </head>
 <body>
-    <h1>Your News, through the decades</h1>
+    <h1>Your News, Your Decade</h1>
 
-    {% if user_signup %}
+    {% if signup %}
     	<h2>Sign Up today!</h2>
     {% else %}
         <h2>Log In</h2>
+    {% endif %}
+
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            	<li>{{ error }}</li>
+            {% endfor %}
+        </ul>
     {% endif %}
 
     <form action="/" method="post">
         <label for="username">Username</label>
         <input type="text" name="username" id="username">
 
-        {% if user_signup %}
+        {% if signup %}
             <label for="email">Email</label>
             <input type="text" name="email" id="email">
         {% endif %}
@@ -28,11 +36,12 @@
         <label for="password">Password</label>
         <input type="text" name="password" id="password">
 
-        {% if user_signup %}
+        {% if signup %}
             <input type="submit" value="Sign Up" name="submit">
+            <button type="submit" name="switch" value="login">Return to Login</button>
         {% else %}
             <input type="submit" value="Log In" name="submit">
-            <input type="submit" value="Create Account" name="submit">
+            <button type="submit" name="switch" value="register">Create Account</button>
         {% endif %}
     </form>
 </body>
