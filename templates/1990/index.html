@@ -2,38 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-     
+    <title>The Shrimpy Chip News</title>
 </head>
 <body>
-    <header>
-        <h1>The Shrimp Times</h1>
-    </header>
-    <nav>`
-        <button> placeholder</button>
-    </nav>
+    {% extends 'layout.html' %}
 
+
+    {% block content %}
     <div>
-       <ul>
-           <h4>Articles</h4>
-           <li>
-               <a>Clickable headline</a>
-           </li>
-           <li>
-               <a>Clickable headline</a>
-           </li>
-           <li>
-               <a>Clickable headline</a>
-           </li>
-       </ul>
-        <img alt="large img">
-        <article>
-            <a id="largeHeadline">Clickable headline</a>
-            <p> Context Context Context Context Context Context Context Context
-            Context Context Context Context Context Context Context Context </p>
-        </article>
-
+        <h1>The News</h1>
+        <ul>
+            {% for article in articles %}
+            	<li>{{ article }}</li>
+            {% endfor %}
+        </ul>
     </div>
 
+    <img src="/static/images/Logo.png" alt="">
+    {% endblock %}
 </body>
 </html>

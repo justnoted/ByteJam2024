@@ -79,4 +79,8 @@ def get_today_decade():
     return year - (year % 10)
 
 
+def get_today_month():
+    return datetime.now().month
+
+
 Base.metadata.create_all(engine)

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Shrimpy Chip Times</title>
+</head>
+<body>
+    <header>
+        <a href="/templates/2020/Index.html"><img src="/static/images/ShrimpyLogo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#">US</a></li>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </nav>
+
+    </header>
+
+
+    <form action="/home" class="Timeline">
+        <a id="Next_btn_1" href=""><img src="/static/images/nextButton.png " height="25" alt="Previous Button"></a>
+        <a href="#" class="Timeline_year">Year</a>
+        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
+
+        <div class="Line">
+            <img src="/static/images/remove.png"  alt="Line for on Timeline">
+        </div>        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
+
+        <div class="Line">
+            <img src="/static/images/remove.png"  alt="Line for on Timeline">
+        </div>
+        <a class="button_Active" href="#"><img id="Active_circle"  src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
+
+        <div class="Line">
+            <img  src="/static/images/remove.png" alt="Line for on Timeline">
+        </div>
+        <a href="#" ><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
+
+        <div class="Line">
+            <img src="/static/images/remove.png" alt="Line for on Timeline">
+        </div>
+        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
+
+        <a href="#" class="Timeline_year_2" >Year</a>
+        <a href="#" id="Next_btn_2"><img src="/static/images/nextButton.png " height="25" alt="Previous Button"></a>
+    </form>
+
+
+
+
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p>Build by the Shrimp Chips Team, ByteJam 2024</p>
+    </footer>
+</body>
+</html>
