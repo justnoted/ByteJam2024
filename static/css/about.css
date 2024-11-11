@@ -164,3 +164,9 @@ article > p{
     margin-top: 20px;
     color: #282626ec;
 }
+
+@media screen and (max-width: 650px) {
+    .cards{
+        flex-direction: column;
+    }
+}
