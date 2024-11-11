@@ -11,7 +11,7 @@ Base = declarative_base()
 session = Session()
 
 
-class User:
+class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     username = Column(String)
@@ -24,7 +24,7 @@ class User:
         self.password = password
 
 
-class CustomNews:
+class CustomNews(Base):
     __tablename__ = 'news'
     id = Column(Integer, primary_key=True)
     year = Column(Integer)
