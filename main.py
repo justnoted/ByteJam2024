@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, redirect, request
-from models.models import *
-from models.decades import Decade
-from models.NYTimesAPI import *
+from back_end.models import *
+from back_end.decades import Decade
+from back_end.NYTimesAPI import *
 import os
 
 
