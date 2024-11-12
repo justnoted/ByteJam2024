@@ -21,6 +21,41 @@
             <button>Log Out</button>
             <button>Home</button>
         </nav>
+        {% for i in range(3) %}
+        	<div class="content">
+                <!--    The left side content featuring the title, authour, and context in a vertical column -->
+                <div class="left">
+                    <a href="article.html"> <button id="TLB" class="LT"></button> </a>
+
+                    <p id="TLA" class="LA"></p>
+                    <p id="TLP" class="LC"></p>
+                </div>
+
+                <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
+                <div class="Middle">
+                    <img id="TMI" src="#" alt="img-placeholder">
+                    <a href="article.html">  </a>
+                    <button id="TMB" class="MT"></button>
+                    <p id="TMA" class="MA"></p>
+                    <p id="TMP" class="MC"> </p>
+                </div>
+
+                <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
+                <div class="right">
+                    <div>
+                        <a href="article.html"> <button id="TRB" class="RT1"></button> </a>
+
+                    <p id="TRA" class="RA1"></p>
+                    <p id="TRP" class="RC1"></p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        {% endfor %}
+
         <div class="content">
             <!--    The left side content featuring the title, authour, and context in a vertical column -->
             <div class="left">
@@ -59,8 +94,8 @@
                 <a href="article.html"> <button  id="MLB" class="LT"></button> </a>
 
 
-                <p id="MLA" class="LA"></p>
-                <p id="MLP" class="LC"> </p>
+                <p id="MLA" class="LA">{{ articles[0]['headline'] }}</p>
+                <p id="MLP" class="LC">{{ articles[1]['headline'] }}</p>
             </div>
 
             <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
@@ -68,8 +103,8 @@
                 <img id="MMI" src="#" alt="img-placeholder">
                 <a href="article.html"> <button id="MMB" class="MT"></button>  </a>
 
-                <p id="MMA" class="MA"></p>
-                <p id="MMP" class="MC"></p>
+                <p id="MMA" class="MA">{{ articles[2]['headline'] }}</p>
+                <p id="MMP" class="MC">{{ articles[3]['headline'] }}</p>
             </div>
 
             <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
@@ -77,8 +112,8 @@
                 <div>
                     <a href="article.html"> <button id="MRB" class="RT1"></button> </a>
 
-                <p id="MRA" class="RA1"></p>
-                <p id="MRP" class="RC1"></p>
+                <p id="MRA" class="RA1">{{ articles[4]['headline'] }}</p>
+                <p id="MRP" class="RC1">{{ articles[5]['headline'] }}</p>
                 </div>
 
             </div>

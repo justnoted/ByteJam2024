@@ -1,5 +1,7 @@
 from flask import Flask, render_template, url_for, redirect, request
 from models.models import *
+from models.decades import Decade
+from models.NYTimesAPI import *
 import os
 
 
@@ -48,14 +50,15 @@ def index():
     return render_template("login.html")
 
 
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
-    decade = request.form.get('year') if request.form.get('year') else get_today_decade()
+    decade = get_today_decade()
     month = get_today_month()
 
-    # TODO: Hook up the API JSON here
+    if request.method == "POST":
+        decade = request.form.get('year') if request.form.get('year') else get_today_decade()
 
-    return render_template(f"{decade}/index.html")
+    return render_template(f"{decade}/index.html", articles=get_news_data(), decade=decade, decades=Decade.__members__.values())
 
 
 @app.route('/about')

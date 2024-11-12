@@ -4,69 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shrimp Chips Times</title>
-    <link rel="stylesheet" href="/static/css/Homepagestyle.css">
+    <link rel="stylesheet" href="/static/css/2020.css">
     <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Ramabhadra&display=swap" rel="stylesheet">
 </head>
 <body>
     {% extends 'layout.html' %}
 
     {% block content %}
-    <main>
-        <div class="background_img">
-            <img src="/static/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
+        <main>
+            <div class="background_img">
+                <img src="/static/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
 
-            <div class="title_background">
-                <img id="News_Title_img" src="/static/images/NewsTitle.png" alt="Title of the news">
-                <h1>Article Title</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <button>Read More</button>
-            </div>
-        </div>
-
-        <h2>Today's News</h2>
-        
-        <section class="News_cards">
-            <img src="/static/images/image-.png" alt="">
-            <div class="Card">
-                <div class="titleandbutton">
-                    <h3>Title</h3>
-                    <button class="Read_button">Read More</button>       
+                <div class="title_background">
+                    <img id="News_Title_img" src="/static/images/NewsTitle.png" alt="Title of the news">
+                    <h1>Article Title</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <button>Read More</button>
                 </div>
-                
-                <h4>Author</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                   sed do eiusmod tempor incididunt ut labore et dolore magna 
-                   aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                   ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                   Duis aute irure dolor in reprehenderit in voluptate velit 
-                   esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                
             </div>
-        </section>
-        <section class="News_cards">
-            <img src="/static/images/image-.png" alt="">
-            <div class="Card">
-                <div class="titleandbutton">
-                    <h3>Title</h3>
-                    <button class="Read_button">Read More</button>       
-                </div>
 
-                <h4>Author</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                   sed do eiusmod tempor incididunt ut labore et dolore magna 
-                   aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                   ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                   Duis aute irure dolor in reprehenderit in voluptate velit 
-                   esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-        </section>
-    </main>
+            <h2>Today's News</h2>
+
+            <section class="News_cards">
+                <img src="/static/images/image-.png" alt="">
+                <div class="Card">
+                    <div class="titleandbutton">
+                        <h3>Title</h3>
+                        <button class="Read_button">Read More</button>
+                    </div>
+
+                    <h4>Author</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                       sed do eiusmod tempor incididunt ut labore et dolore magna
+                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                       Duis aute irure dolor in reprehenderit in voluptate velit
+                       esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                </div>
+            </section>
+
+            {% for article in articles %}
+                <section class="News_cards">
+                    <img src="/static/images/image-.png" alt="">
+                    <div class="Card">
+                        <div class="titleandbutton">
+                            <h3>{{ article['headline'] }}</h3>
+                            <button class="Read_button"><a href="{{ article['web_url'] }}">Read More</a></button>
+                        </div>
+
+                        <h4>{{ article['authors'] }}</h4>
+                        <p>{{ article['lead_paragraph'] }}
+                        </p>
+                    </div>
+                </section>
+
+            {% endfor %}
+        </main>
     {% endblock %}
 </body>
 </html>

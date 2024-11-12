@@ -1,0 +1,129 @@
+.header_layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.nav_layout li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav_layout li a:hover{
+    color: gray;
+
+}
+
+.nav_layout a{
+    text-decoration: none;
+    color: #000000;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}
+.nav_layout button{
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: #000000 solid 2px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+.nav_layout button:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+.header_layout img{
+    width: 40px;
+}
+.Timeline form {
+    display: inline;
+}
+.Timeline a{
+    display: flex;
+    align-items: center;
+}
+.Timeline button{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.Line{
+    height: 10px;
+    width: 20%;
+    display: flex;
+    align-content: center;
+}
+.Line img{
+    height: 10px;
+    width: 100%;
+
+}
+.Timeline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 10px;;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.Timeline_year{
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 8px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+}
+.Timeline_year:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+.Timeline_year_2{
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 8px;
+    height: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+}
+.Timeline_year_2:hover{
+    background-color: white;
+    color: #000000;
+    border: #000000 solid 2px;
+}
+
+#Next_btn_1{
+    margin-right: 10px;
+    transform: scaleX(-1);
+}
+#Next_btn_2{
+    margin-left: 10px;
+}
