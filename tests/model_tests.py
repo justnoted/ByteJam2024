@@ -2,7 +2,9 @@ import pytest
 from datetime import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from back_end.models import *
+from models.models import *
+
+from back_end.models import check_if_user_exists
 
 
 @pytest.fixture(scope='module')
@@ -14,35 +16,23 @@ def test_session():
     session = Session()
     yield session
     session.close()
+def test_check_user_exists(test_session):
+    user = User(username="testuser", email="test@example.com", password="TestPassword123!")
+    test_session.add(user)
+    test_session.commit()
 
+    assert check_if_user_exists(test_session, "testuser")
+    assert not check_if_user_exists(test_session, "nonexistentuser")
 
-def test_validate_user_signup_success():
-    errors = validate_user_signup("BrayanCova", "brayan@gmail.com", "HehSecure3")
-    assert errors is None
+def test_get_user(test_session):
+    user = User(username="testuser", email="test@example.com", password="TestPassword123!")
+    test_session.add(user)
+    test_session.commit()
 
+    retrieved_user = get_user_with_username(test_session, "testuser")
+    assert retrieved_user.username == "testuser"
+    assert retrieved_user.email == "test@example.com"
+    assert retrieved_user.password == "TestPassword123!"
 
-def test_validate_user_signup_email_error():
-    errors = validate_user_signup("BrayanCova", "notanemail", "HehSecure3")
-    assert errors == ['Please enter a valid email']
-
-
-def test_validate_user_signup_password_error():
-    errors = validate_user_signup("BrayanCova", "brayan@gmail.com", "pass")
-    assert errors == ['Password MUST be at least 8 characters long, 1 letter, and 1 number']
-
-
-def test_validate_user_signup_empty_error():
-    errors = validate_user_signup("", "", "")
-    assert errors == ['Username must be at least 5 characters in length', 'Email is required', 'Password is required']
-
-
-def test_validate_user_login():
-    print("")
-
-
-def test_check_user_exists():
-    print("")
-
-
-def test_get_user():
-    print("")
+def test_get_today_decade():
+    assert get_today_decade() == datetime.now().year - (datetime.now().year % 10)

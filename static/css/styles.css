@@ -22,6 +22,9 @@
         form {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-top: 10%;
         }
 
         label {
@@ -33,6 +36,9 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
+            width: 25%;
+
+
         }
 
         input[type="submit"], button {
@@ -43,6 +49,7 @@
             border-radius: 3px;
             cursor: pointer;
             margin-top: 15px;
+            width: 10%;
         }
 
         input[type="submit"]:hover, button:hover {

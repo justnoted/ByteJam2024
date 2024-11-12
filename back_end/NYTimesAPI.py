@@ -5,7 +5,7 @@ import requests
 
 def get_news_data():
     try:
-        conn = "https://api.nytimes.com/svc/archive/v1/2024/11.json?api-key=Uk0DAHWEzvDcpsjumb5ZoGp2GmgtfcSq"
+        conn = "https://api.nytimes.com/svc/archive/v1/2002/10.json?api-key=Uk0DAHWEzvDcpsjumb5ZoGp2GmgtfcSq"
         response = requests.get(conn)
         json_response = response.json()
     except Exception as e:
