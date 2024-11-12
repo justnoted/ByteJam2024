@@ -2,98 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>2000s</title>
-    <style>
-        body{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-
-        p, button{
-        font-family: "Times New Roman", Times, serif;
-        }
-
-        #container{
-        border-style: solid
-        }
-
-        .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color: white;
-        width: 1100px;
-        }
-
-        .left {
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-
-        }
-
-        .LA, .LT, .LC{
-        margin: 2px;
-
-        }
-
-        .LT, .MT, .RT1, .RT2{
-            color: blue;
-            margin-top: 20px;
-            border-style: none;
-            background-color:white;
-        }
-
-        .LT{
-        font-size: 1.25em;
-        }
-
-        .MT{
-        font-size: 2em;
-        }
-
-        .Middle{
-        display: flex;
-        flex-direction: column;
-        width: 700px;
-        padding-left: 30px;
-        padding-right: 30px;
-        }
-
-        .right{
-        display: flex;
-        flex-direction: row;
-        width: 200px
-        }
-
-        .RC1, .RC2{
-        font-size: 8px;
-        }
-
-        header{
-        display:flex;
-        border-bottom-style: solid;
-        }
-
-        nav{
-        background-color: gray;
-        height: 50px;
-        }
-
-        .LC{
-        padding-top: 10px;
-        }
-
-
-
-
-
-
-
-
-    </style>
+    <title>The Shrimpy Chip News</title>
+    <link rel="stylesheet" href="/static/css/2010.css">
 </head>
 
 <header>
@@ -102,17 +12,55 @@
 
 
 <body>
+    {% extends 'layout.html' %}
+
+    {% block content %}
 
     <div id="container">
         <nav>
-            <button>placeholder</button>
-            <button>placeholder</button>
+            <button>Log Out</button>
+            <button>Home</button>
         </nav>
+        {% for i in range(3) %}
+        	<div class="content">
+                <!--    The left side content featuring the title, authour, and context in a vertical column -->
+                <div class="left">
+                    <a href="article.html"> <button id="TLB" class="LT"></button> </a>
+
+                    <p id="TLA" class="LA"></p>
+                    <p id="TLP" class="LC"></p>
+                </div>
+
+                <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
+                <div class="Middle">
+                    <img id="TMI" src="#" alt="img-placeholder">
+                    <a href="article.html">  </a>
+                    <button id="TMB" class="MT"></button>
+                    <p id="TMA" class="MA"></p>
+                    <p id="TMP" class="MC"> </p>
+                </div>
+
+                <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
+                <div class="right">
+                    <div>
+                        <a href="article.html"> <button id="TRB" class="RT1"></button> </a>
+
+                    <p id="TRA" class="RA1"></p>
+                    <p id="TRP" class="RC1"></p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        {% endfor %}
+
         <div class="content">
             <!--    The left side content featuring the title, authour, and context in a vertical column -->
             <div class="left">
+                <a href="article.html"> <button id="TLB" class="LT"></button> </a>
 
-                <button id="TLB" class="LT"></button>
                 <p id="TLA" class="LA"></p>
                 <p id="TLP" class="LC"></p>
             </div>
@@ -120,6 +68,7 @@
             <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
             <div class="Middle">
                 <img id="TMI" src="#" alt="img-placeholder">
+                <a href="article.html">  </a>
                 <button id="TMB" class="MT"></button>
                 <p id="TMA" class="MA"></p>
                 <p id="TMP" class="MC"> </p>
@@ -128,7 +77,8 @@
             <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
             <div class="right">
                 <div>
-                    <button id="TRB" class="RT1"></button>
+                    <a href="article.html"> <button id="TRB" class="RT1"></button> </a>
+
                 <p id="TRA" class="RA1"></p>
                 <p id="TRP" class="RC1"></p>
                 </div>
@@ -141,26 +91,29 @@
         <div class="content">
             <!--    The left side content featuring the title, author, and context in a vertical column -->
             <div class="left">
+                <a href="article.html"> <button  id="MLB" class="LT"></button> </a>
 
-                <button  id="MLB" class="LT"></button>
-                <p id="MLA" class="LA"></p>
-                <p id="MLP" class="LC"> </p>
+
+                <p id="MLA" class="LA">{{ articles[0]['headline'] }}</p>
+                <p id="MLP" class="LC">{{ articles[1]['headline'] }}</p>
             </div>
 
             <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
             <div class="Middle">
                 <img id="MMI" src="#" alt="img-placeholder">
-                <button id="MMB" class="MT"></button>
-                <p id="MMA" class="MA"></p>
-                <p id="MMP" class="MC"></p>
+                <a href="article.html"> <button id="MMB" class="MT"></button>  </a>
+
+                <p id="MMA" class="MA">{{ articles[2]['headline'] }}</p>
+                <p id="MMP" class="MC">{{ articles[3]['headline'] }}</p>
             </div>
 
             <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
             <div class="right">
                 <div>
-                    <button id="MRB" class="RT1"></button>
-                <p id="MRA" class="RA1"></p>
-                <p id="MRP" class="RC1"></p>
+                    <a href="article.html"> <button id="MRB" class="RT1"></button> </a>
+
+                <p id="MRA" class="RA1">{{ articles[4]['headline'] }}</p>
+                <p id="MRP" class="RC1">{{ articles[5]['headline'] }}</p>
                 </div>
 
             </div>
@@ -171,8 +124,9 @@
         <div class="content">
             <!--    The left side content featuring the title, authour, and context in a vertical column -->
             <div class="left">
+                <a href="article.html"> <button id="BLB" class="LT"></button> </a>
 
-                <button id="BLB" class="LT"></button>
+
                 <p id="BLA" class="LA"></p>
                 <p id="BLP" class="LC"> </p>
             </div>
@@ -180,7 +134,8 @@
             <!-- the middle content featuring large image with larger text, should be bigger than the two side bars-->
             <div class="Middle">
                 <img id="BMI" src="#" alt="img-placeholder">
-                <button id="BMB" class="MT"></button>
+                <a href="article.html">  <button id="BMB" class="MT"></button> </a>
+
                 <p id="BMA" class="MA"></p>
                 <p id="BMP" class="MC"></p>
             </div>
@@ -188,7 +143,8 @@
             <!-- The right ride content featuring the title author and context 2 at a time in the same space as the left side-->
             <div class="right">
                 <div>
-                    <button id="BRB" class="RT1"></button>
+                    <a href="article.html"> <button id="BRB" class="RT1"></button> </a>
+
                 <p id="BRA" class="RA1"></p>
                 <p id="BRP" class="RC1"> </p>
                 </div>
@@ -199,6 +155,8 @@
 
         </div>
     </div>
+
+    {% endblock %}
 
 </body>
 

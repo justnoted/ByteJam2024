@@ -4,110 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shrimp Chips Times</title>
-    <link rel="stylesheet" href="/static/css/Homepagestyle.css">
+    <link rel="stylesheet" href="/static/css/2020.css">
     <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Ramabhadra&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="/templates/2020/Index.html"><img src="/static/images/ShrimpyLogo.png" alt=""></a>
-        
-            <nav>
-                <ul>
-                    <li><a href="#">Us. World</a></li>
-                    <li><a href="#">Technology</a></li>
-                    <li><a href="/templates/about.html">About Us</a></li>
-                    
-                    <button>Login</button>
-                </ul>
-            </nav>
+    {% extends 'layout.html' %}
 
-    </header>
-    <section class="Timeline">
-        
-        <a id="Next_btn_1" href=""><img src="/static/images/nextButton.png " height="25" alt="Previous Button"></a>
-        <a href="#" class="Timeline_year">Year</a>
-        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
- 
-        <div class="Line">
-            <img src="/static/images/remove.png"  alt="Line for on Timeline">
-        </div>        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-        
-        <div class="Line">
-            <img src="/static/images/remove.png"  alt="Line for on Timeline">
-        </div>        
-        <a class="button_Active" href="#"><img id="Active_circle"  src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-
-        <div class="Line">
-            <img  src="/static/images/remove.png" alt="Line for on Timeline">
-        </div>        
-        <a href="#" ><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-
-        <div class="Line">
-            <img src="/static/images/remove.png" alt="Line for on Timeline">
-        </div>
-        <a href="#"><img src="/static/images/circleButton.png" height="20" alt="Circle for the next year"></a>
-
-        <a href="#" class="Timeline_year_2" >Year</a>
-        <a href="#" id="Next_btn_2"><img src="/static/images/nextButton.png " height="25" alt="Previous Button"></a>
-
-    </section>
-
-    <main>
-        
+    {% block content %}
+        <main>
             <div class="background_img">
                 <img src="/static/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="">
-                
+
                 <div class="title_background">
                     <img id="News_Title_img" src="/static/images/NewsTitle.png" alt="Title of the news">
                     <h1>Article Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                        enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <button>Read More</button>
-            </div>
+                </div>
             </div>
 
-        <h2>Today's News</h2>
-        
-        <section class="News_cards">
-            <img src="/static/images/image-.png" alt="">
-            <div class="Card">
-                <div class="titleandbutton">
-                    <h3>Title</h3>
-                    <button class="Read_button">Read More</button>       
-                </div>
-                
-                <h4>Author</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                   sed do eiusmod tempor incididunt ut labore et dolore magna 
-                   aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                   ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                   Duis aute irure dolor in reprehenderit in voluptate velit 
-                   esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                
-            </div>
-        </section>
-        <section class="News_cards">
-            <img src="/static/images/image-.png" alt="">
-            <div class="Card">
-                <div class="titleandbutton">
-                    <h3>Title</h3>
-                    <button class="Read_button">Read More</button>       
-                </div>
+            <h2>Today's News</h2>
 
-                <h4>Author</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                   sed do eiusmod tempor incididunt ut labore et dolore magna 
-                   aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                   ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                   Duis aute irure dolor in reprehenderit in voluptate velit 
-                   esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-        </section>
-    </main>
+            <section class="News_cards">
+                <img src="/static/images/image-.png" alt="">
+                <div class="Card">
+                    <div class="titleandbutton">
+                        <h3>Title</h3>
+                        <button class="Read_button">Read More</button>
+                    </div>
+
+                    <h4>Author</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                       sed do eiusmod tempor incididunt ut labore et dolore magna
+                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                       Duis aute irure dolor in reprehenderit in voluptate velit
+                       esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                </div>
+            </section>
+
+            {% for article in articles %}
+                <section class="News_cards">
+                    <img src="/static/images/image-.png" alt="">
+                    <div class="Card">
+                        <div class="titleandbutton">
+                            <h3>{{ article['headline'] }}</h3>
+                            <button class="Read_button"><a href="{{ article['web_url'] }}">Read More</a></button>
+                        </div>
+
+                        <h4>{{ article['authors'] }}</h4>
+                        <p>{{ article['lead_paragraph'] }}
+                        </p>
+                    </div>
+                </section>
+
+            {% endfor %}
+        </main>
+    {% endblock %}
 </body>
 </html>

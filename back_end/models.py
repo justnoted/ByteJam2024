@@ -44,10 +44,10 @@ def validate_user_signup(username, email, password):
     errors.append("Username must be at least 5 characters in length") if len(username) < 5 else None
 
     email_regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
-    pass_regex = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"  # TODO: Revise regex, not working
+    pass_regex = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
 
     errors.append("Email is required") if email.strip() == "" else errors.append("Please enter a valid email") if not re.fullmatch(email_regex, email) else None
-    errors.append("Password is required") if password.strip() == "" else errors.append("Password MUST be 6-20 long, 1 UPPERCASE, 1 lowercase, and 1 special symbol") if re.match(pass_regex, password) else None
+    errors.append("Password is required") if password.strip() == "" else errors.append("Password MUST be at least 8 characters long, 1 letter, and 1 number") if not bool(re.match(pass_regex, password)) else None
 
     return errors if errors else None
 
@@ -77,6 +77,10 @@ def get_user_with_username(username):
 def get_today_decade():
     year = datetime.now().year
     return year - (year % 10)
+
+
+def get_today_month():
+    return datetime.now().month
 
 
 Base.metadata.create_all(engine)

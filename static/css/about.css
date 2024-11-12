@@ -66,8 +66,11 @@ Main h1{
 }
 .Image_Title img{
     background-color: gray;
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
 #Tile_img{
@@ -99,35 +102,71 @@ article > p{
     display: flex;
     margin-bottom: 3%;
     font-family: "Open Sans", sans-serif;
-    align-items: center;
-    
+    align-items: center;    
 }
 .title_body p{
     font-family: "Open Sans", sans-serif;
     font-size: .8125rem;
     line-height: 150%;
+    margin-left: 5%;
 }
 .title_body h3{
     font-family: "Ramabhadra", sans-serif;
     line-height: 100%;
-    padding-right: 10%;
     font-weight: 500;
     white-space: nowrap;
+    padding: 20px 30px 20px 0;
+    padding-right: 80px;
+    border-right: solid 1px black;
+    width: 50px;
+
 }
 .Card_area{
+
     padding: 10px 15%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
 
 }
 .cards{
-    width: 200px;
-    height: 300px;
-    background-color: gray;
+    width: 480px;
+    background-color: rgba(200, 193, 193, 0.473);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Alatsi", sans-serif;
+    margin: 10px;
 }
 
 .cards > img{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     background-color: white;
     border-radius: 50%;
+    margin: 5px ;
+    
+}
+.Discpt{
+    padding: 5%;
+    padding-top: 0;
+}
+#name{
+    font-size: 1.5rem;
+}
 
+.Discpt h4{
+    line-height: 150%;
+
+}
+.Discpt p{
+    margin-top: 20px;
+    color: #282626ec;
+}
+
+@media screen and (max-width: 650px) {
+    .cards{
+        flex-direction: column;
+    }
 }
